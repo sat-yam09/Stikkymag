@@ -214,6 +214,9 @@ export function Cart() {
 
                       <div className="mt-4 grid gap-2 text-sm leading-6 text-[#5d5d5d]">
                         <p>Preview ref: {item.previewReference}</p>
+                        {item.hostedImageUrl ? (
+                          <p className="break-all">Hosted image: {item.hostedImageUrl}</p>
+                        ) : null}
                         {item.fileName ? <p>File: {item.fileName}</p> : null}
                         <p>
                           Pricing: {formatCurrency(item.unitPrice)} each or{" "}
@@ -322,8 +325,8 @@ export function Cart() {
               Order note
             </p>
             <p className="mt-3 text-sm leading-7 text-[#5d5d5d]">
-              Custom uploads stay private in-browser, so WhatsApp gets the preview
-              reference and file name instead of a hosted image URL.
+              Custom uploads keep their preview inside the app, and WhatsApp gets a
+              hosted image link plus the file name for the full artwork reference.
             </p>
 
             {lastOrderId ? (

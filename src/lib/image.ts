@@ -89,3 +89,31 @@ export function createPreviewReference(fileName: string) {
 
   return `Preview-${safeName.slice(0, 16) || "upload"}-${stamp}`;
 }
+
+export async function uploadCustomImage(file: File) {
+  const formData = new FormData();
+  formData.append("file", file, file.name);
+
+  const response = await fetch("/api/custom-image-upload", {
+    method: "POST",
+    body: formData,
+  });
+
+  if (!response.ok) {
+    const payload = (await response.json().catch(() => null)) as
+      | { error?: string }
+      | null;
+
+    throw new Error(
+      payload?.error || "We could not upload the image for WhatsApp sharing.",
+    );
+  }
+
+  const payload = (await response.json()) as { imageUrl: string };
+
+  if (!payload.imageUrl) {
+    throw new Error("Hosted image URL was missing from the upload response.");
+  }
+
+  return payload.imageUrl;
+}

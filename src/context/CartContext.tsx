@@ -25,6 +25,7 @@ type AddCustomProductInput = {
   shape: ProductShape;
   image: string;
   previewReference: string;
+  hostedImageUrl?: string;
   fileName: string;
   unitPrice: number;
   accent?: string;
@@ -181,6 +182,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         quantity: 1,
         image: input.image,
         previewReference: input.previewReference,
+        hostedImageUrl: input.hostedImageUrl,
         fileName: input.fileName,
         accent: input.accent || "#e6efe9",
       },

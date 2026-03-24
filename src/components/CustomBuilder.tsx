@@ -7,6 +7,7 @@ import {
   ACCEPTED_FILE_LABEL,
   createPreviewReference,
   processImageUpload,
+  uploadCustomImage,
 } from "@/lib/image";
 import type { ProductShape, ProductType } from "@/lib/types";
 import {
@@ -21,6 +22,7 @@ type BuilderState = {
   productType: ProductType;
   shape: ProductShape;
   image: string | null;
+  sourceFile: File | null;
   fileName: string;
   sizeLabel: string;
   error: string | null;
@@ -48,13 +50,14 @@ const initialState: BuilderState = {
   productType: "keychain",
   shape: "circle",
   image: null,
+  sourceFile: null,
   fileName: "",
   sizeLabel: "",
   error: null,
 };
 
 const builderHighlights = [
-  "Upload stays on-device until checkout",
+  "Hosted image link gets added for WhatsApp",
   "Live product mask updates instantly",
   "Pair pricing still works in cart",
 ];
@@ -101,6 +104,7 @@ export function CustomBuilder() {
       setBuilder((currentValue) => ({
         ...currentValue,
         image: processed.dataUrl,
+        sourceFile: file,
         fileName: processed.fileName,
         sizeLabel: processed.sizeLabel,
         error: null,
@@ -112,6 +116,7 @@ export function CustomBuilder() {
       setBuilder((currentValue) => ({
         ...currentValue,
         image: null,
+        sourceFile: null,
         fileName: "",
         sizeLabel: "",
         error: message,
@@ -122,8 +127,8 @@ export function CustomBuilder() {
     }
   }
 
-  function handleAddToCart() {
-    if (!builder.image) {
+  async function handleAddToCart() {
+    if (!builder.image || !builder.sourceFile) {
       setBuilder((currentValue) => ({
         ...currentValue,
         error: "Upload a JPG or PNG image before adding a custom product.",
@@ -131,21 +136,40 @@ export function CustomBuilder() {
       return;
     }
 
-    addCustomProduct({
-      title: `Custom ${shapeLabel} ${productLabel}`,
-      productType: builder.productType,
-      shape: builder.shape,
-      image: builder.image,
-      previewReference: createPreviewReference(builder.fileName),
-      fileName: builder.fileName,
-      unitPrice: currentPrice,
-      accent: "#1c1c1c",
-    });
+    setIsProcessing(true);
 
-    setBuilder((currentValue) => ({
-      ...currentValue,
-      error: null,
-    }));
+    try {
+      const hostedImageUrl = await uploadCustomImage(builder.sourceFile);
+
+      addCustomProduct({
+        title: `Custom ${shapeLabel} ${productLabel}`,
+        productType: builder.productType,
+        shape: builder.shape,
+        image: builder.image,
+        previewReference: createPreviewReference(builder.fileName),
+        hostedImageUrl,
+        fileName: builder.fileName,
+        unitPrice: currentPrice,
+        accent: "#1c1c1c",
+      });
+
+      setBuilder((currentValue) => ({
+        ...currentValue,
+        error: null,
+      }));
+    } catch (error) {
+      const message =
+        error instanceof Error
+          ? error.message
+          : "We could not upload the image for WhatsApp sharing.";
+
+      setBuilder((currentValue) => ({
+        ...currentValue,
+        error: message,
+      }));
+    } finally {
+      setIsProcessing(false);
+    }
   }
 
   return (
@@ -165,7 +189,8 @@ export function CustomBuilder() {
         </h3>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-white/72">
           Pick the product, choose the shape, upload your image, and add the finished
-          mockup to cart without leaving this screen.
+          mockup to cart without leaving this screen. A hosted image link is created
+          for WhatsApp sharing.
         </p>
 
         <div className="mt-6 grid gap-3 sm:grid-cols-3">
@@ -359,7 +384,7 @@ export function CustomBuilder() {
               disabled={isProcessing}
               className="mt-5 inline-flex h-14 w-full items-center justify-center rounded-full bg-[#ffd54a] px-5 text-sm font-semibold uppercase tracking-[0.18em] text-black transition-colors hover:bg-[#ffdf73] disabled:cursor-not-allowed disabled:bg-[#8d8d8d]"
             >
-              {isProcessing ? "Preparing preview" : "Add Custom Product"}
+              {isProcessing ? "Uploading image" : "Add Custom Product"}
             </button>
           </div>
         </div>
@@ -408,8 +433,8 @@ export function CustomBuilder() {
               Upload mode
             </p>
             <p className="mt-2 text-sm leading-6 text-[#525252]">
-              Preview stays inside the browser. WhatsApp receives the order summary plus
-              preview reference.
+              Preview stays inside the app, and WhatsApp receives a hosted link to the
+              full uploaded image.
             </p>
           </div>
         </div>

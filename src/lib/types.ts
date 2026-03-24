@@ -28,6 +28,7 @@ export type CartItem = {
   quantity: number;
   image: string;
   previewReference: string;
+  hostedImageUrl?: string;
   fileName?: string;
   accent: string;
 };

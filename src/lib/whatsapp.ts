@@ -58,7 +58,11 @@ export function buildWhatsappMessage(params: {
     lines.push(
       `- Pricing Rule: ${formatCurrency(SINGLE_PRODUCT_PRICE)} for 1 / ${formatCurrency(TWO_ITEM_COMBO_PRICE)} for 2`,
     );
-    lines.push(`- Preview Image: ${item.previewReference}`);
+    if (item.hostedImageUrl) {
+      lines.push(`- Image Link: ${item.hostedImageUrl}`);
+    } else {
+      lines.push(`- Preview Image: ${item.previewReference}`);
+    }
 
     if (item.fileName) {
       lines.push(`- File Name: ${item.fileName}`);

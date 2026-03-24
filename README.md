@@ -37,6 +37,11 @@ npm run build
 - No environment variable is required for WhatsApp checkout.
 - The checkout recipient is hardcoded to `919824006191`.
 - If your hosting provider previously had `NEXT_PUBLIC_WHATSAPP_NUMBER` set, delete it and redeploy so an old client build does not keep using the wrong number.
+- To send full custom-image links in WhatsApp, add:
+  - `CLOUDINARY_CLOUD_NAME`
+  - `CLOUDINARY_API_KEY`
+  - `CLOUDINARY_API_SECRET`
+  - optional `CLOUDINARY_UPLOAD_FOLDER`
 
 ## WhatsApp Setup
 
@@ -45,3 +50,8 @@ Current WhatsApp checkout recipient:
 ```bash
 919824006191
 ```
+
+## Custom Image Hosting
+
+Custom uploads now keep a local preview in the app and also upload the original file
+to Cloudinary so WhatsApp can receive a hosted image link.
