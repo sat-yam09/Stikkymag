@@ -13,12 +13,7 @@ import {
   getSubtotal,
 } from "@/lib/utils";
 
-const DEMO_WHATSAPP_NUMBER = "919999999999";
-
-export const WHATSAPP_NUMBER =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") || DEMO_WHATSAPP_NUMBER;
-
-export const IS_DEMO_WHATSAPP_NUMBER = WHATSAPP_NUMBER === DEMO_WHATSAPP_NUMBER;
+export const WHATSAPP_NUMBER = "919824006191";
 
 export function generateOrderId() {
   const now = new Date();

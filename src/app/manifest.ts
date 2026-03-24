@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Custom keychains and fridge magnets with live preview and WhatsApp checkout.",
     start_url: "/",
     display: "standalone",
-    background_color: "#f2eee6",
-    theme_color: "#163a33",
+    background_color: "#f3f3f3",
+    theme_color: "#111111",
     icons: [
       {
         src: "/stikkymag-logo.svg",

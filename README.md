@@ -32,10 +32,16 @@ npm run lint
 npm run build
 ```
 
+## Deploy
+
+- No environment variable is required for WhatsApp checkout.
+- The checkout recipient is hardcoded to `919824006191`.
+- If your hosting provider previously had `NEXT_PUBLIC_WHATSAPP_NUMBER` set, delete it and redeploy so an old client build does not keep using the wrong number.
+
 ## WhatsApp Setup
 
-Set the recipient number before launch:
+Current WhatsApp checkout recipient:
 
 ```bash
-NEXT_PUBLIC_WHATSAPP_NUMBER=919999999999
+919824006191
 ```

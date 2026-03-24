@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { CustomBuilder } from "@/components/CustomBuilder";
 import { PageHero } from "@/components/PageHero";
+
+export const metadata: Metadata = {
+  title: "Custom Builder | Stikkymag",
+  description:
+    "Upload artwork, preview it live, and create a custom keychain or fridge magnet inside the Stikkymag builder.",
+};
 
 export default function CustomPage() {
   return (

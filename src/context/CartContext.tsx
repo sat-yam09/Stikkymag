@@ -16,7 +16,8 @@ import {
   getSubtotal,
 } from "@/lib/utils";
 
-const CART_STORAGE_KEY = "keepsake-atelier-cart-v1";
+const CART_STORAGE_KEY = "stikkymag-cart-v1";
+const LEGACY_CART_STORAGE_KEY = "keepsake-atelier-cart-v1";
 
 type AddCustomProductInput = {
   title: string;
@@ -64,17 +65,22 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     try {
-      const storedValue = window.localStorage.getItem(CART_STORAGE_KEY);
+      const storedValue =
+        window.localStorage.getItem(CART_STORAGE_KEY) ||
+        window.localStorage.getItem(LEGACY_CART_STORAGE_KEY);
 
       if (storedValue) {
         const parsedItems = JSON.parse(storedValue) as CartItem[];
 
         if (Array.isArray(parsedItems)) {
           setItems(parsedItems);
+          window.localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(parsedItems));
+          window.localStorage.removeItem(LEGACY_CART_STORAGE_KEY);
         }
       }
     } catch {
       window.localStorage.removeItem(CART_STORAGE_KEY);
+      window.localStorage.removeItem(LEGACY_CART_STORAGE_KEY);
     } finally {
       setHydrated(true);
     }

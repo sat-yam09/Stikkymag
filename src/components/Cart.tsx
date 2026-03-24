@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useCart } from "@/context/CartContext";
 import type { CartItem, CheckoutDetails } from "@/lib/types";
 import {
-  IS_DEMO_WHATSAPP_NUMBER,
   buildWhatsappMessage,
   createWhatsappUrl,
   generateOrderId,
@@ -330,13 +329,6 @@ export function Cart() {
               Custom uploads stay private in-browser, so WhatsApp gets the preview
               reference and file name instead of a hosted image URL.
             </p>
-
-            {IS_DEMO_WHATSAPP_NUMBER ? (
-              <p className="mt-4 rounded-[1.4rem] border border-[#d8b676] bg-[#fff1d0] px-4 py-3 text-sm leading-6 text-[#6d4a12]">
-                Set <code>NEXT_PUBLIC_WHATSAPP_NUMBER</code> before launch to replace
-                the demo recipient number.
-              </p>
-            ) : null}
 
             {lastOrderId ? (
               <p className="mt-4 rounded-[1.4rem] border border-[#d6d6d6] bg-[#f7f7f7] px-4 py-3 text-sm leading-6 text-[#444444]">

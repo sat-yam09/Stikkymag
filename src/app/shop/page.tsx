@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { ProductCard } from "@/components/ProductCard";
 import { designedProducts } from "@/data/products";
+
+export const metadata: Metadata = {
+  title: "Shop | Stikkymag",
+  description:
+    "Browse Stikkymag's pre-designed keychain and magnet drops in a dedicated mobile-first shopping grid.",
+};
 
 export default function ShopPage() {
   return (

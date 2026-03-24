@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { InstallAppSection } from "@/components/InstallAppSection";
 import { PageHero } from "@/components/PageHero";
 import { designedProducts } from "@/data/products";
 import { formatCurrency } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Stikkymag | Mobile-First Custom Keychains and Magnets",
+  description:
+    "Shop pre-designed drops, build custom keychains or magnets, and checkout on WhatsApp through a clean mobile-first storefront.",
+};
 
 const featuredProducts = designedProducts.slice(0, 3);
 
