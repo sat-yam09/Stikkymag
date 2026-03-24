@@ -43,6 +43,10 @@ export const designedProducts: CatalogProduct[] = [
   },
 ];
 
+export function getDesignedProductById(id: string) {
+  return designedProducts.find((product) => product.id === id);
+}
+
 export function getCustomProductPrice(
   productType: ProductType,
   shape: ProductShape,

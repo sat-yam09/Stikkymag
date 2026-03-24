@@ -16,16 +16,16 @@ export function SectionHeading({
       className={
         align === "center"
           ? "mx-auto max-w-3xl text-center"
-          : "max-w-3xl text-left"
+          : "max-w-4xl text-left"
       }
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#537266]">
+      <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#6a6a6a]">
         {eyebrow}
       </p>
-      <h2 className="mt-4 font-display text-4xl tracking-[-0.05em] text-[#18231d] sm:text-5xl">
+      <h2 className="mt-3 font-display text-4xl tracking-[-0.06em] text-[#111111] sm:text-5xl">
         {title}
       </h2>
-      <p className="mt-4 text-base leading-8 text-[#5a6662] sm:text-lg">
+      <p className="mt-3 text-base leading-8 text-[#585858] sm:text-lg">
         {description}
       </p>
     </div>

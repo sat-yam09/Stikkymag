@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f2eee6;
-  --foreground: #16211d;
-  --surface: rgba(255, 255, 255, 0.78);
-  --surface-strong: #fffdf8;
-  --muted: #596560;
-  --border: rgba(18, 33, 29, 0.1);
-  --accent: #163a33;
-  --accent-soft: #e3efe9;
-  --sand: #f8f2e8;
-  --shadow-soft: 0 24px 80px rgba(15, 23, 42, 0.08);
+  --background: #f3f3f3;
+  --foreground: #111111;
+  --surface: rgba(255, 255, 255, 0.96);
+  --surface-strong: #ffffff;
+  --muted: #5d5d5d;
+  --border: rgba(17, 17, 17, 0.1);
+  --accent: #111111;
+  --accent-soft: #ffd54a;
+  --sand: #f8f8f8;
+  --shadow-soft: 0 20px 60px rgba(17, 17, 17, 0.08);
 }
 
 @theme inline {
@@ -23,7 +23,7 @@
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --font-sans: "Aptos", "Trebuchet MS", "Segoe UI", sans-serif;
-  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-display: "Arial Narrow", "Franklin Gothic Medium", "Trebuchet MS", sans-serif;
 }
 
 * {
@@ -37,16 +37,27 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(227, 239, 233, 0.8), transparent 28%),
-    radial-gradient(circle at 84% 12%, rgba(255, 228, 199, 0.7), transparent 24%),
-    linear-gradient(180deg, #fbf8f2 0%, #f2eee6 36%, #f6f2ea 100%);
+    radial-gradient(circle at top right, rgba(255, 213, 74, 0.22), transparent 24%),
+    radial-gradient(circle at top left, rgba(17, 17, 17, 0.06), transparent 22%),
+    linear-gradient(180deg, #171717 0 13rem, #efefef 13rem 100%);
   color: var(--foreground);
   font-family: var(--font-sans);
 }
 
+body::before {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(255, 213, 74, 0.08), transparent 18%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.4), transparent 45%);
+  content: "";
+}
+
 ::selection {
-  background: #cfe7db;
-  color: #102824;
+  background: #ffe066;
+  color: #111111;
 }
 
 a {
@@ -63,6 +74,20 @@ select {
 
 button {
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e7e7e7;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #e7e7e7;
+  border-radius: 999px;
+  background: #111111;
 }
 
 @keyframes float {

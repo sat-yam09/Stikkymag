@@ -61,82 +61,85 @@ export function CheckoutForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-[2rem] border border-white/60 bg-white/84 p-5 shadow-[0_14px_40px_rgba(15,23,42,0.05)]">
+    <form
+      onSubmit={handleSubmit}
+      className="rounded-[2rem] border border-white/8 bg-[#111111] p-5 text-white shadow-[0_18px_44px_rgba(0,0,0,0.2)]"
+    >
       <div className="flex items-center justify-between gap-3">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#587468]">
+          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#ffd54a]">
             Checkout
           </p>
-          <h3 className="mt-2 font-display text-3xl tracking-[-0.04em] text-[#17231e]">
+          <h3 className="mt-2 font-display text-3xl uppercase tracking-[-0.04em] text-white">
             Delivery details
           </h3>
         </div>
-        <span className="rounded-full bg-[#edf4ef] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#31554a]">
+        <span className="rounded-full bg-[#ffd54a] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-black">
           WhatsApp
         </span>
       </div>
 
       <div className="mt-5 grid gap-4">
-        <label className="grid gap-2 text-sm font-semibold text-[#243a34]">
+        <label className="grid gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-white/72">
           Name
           <input
             type="text"
             value={details.name}
             onChange={(event) => updateField("name", event.target.value)}
-            className="h-12 rounded-2xl border border-[#d4ddd8] bg-[#fbfaf7] px-4 text-sm text-[#17231e] outline-none transition-colors focus:border-[#163a33]"
+            className="h-14 rounded-[1.2rem] border border-white/10 bg-white/7 px-4 text-sm text-white outline-none transition-colors placeholder:text-white/34 focus:border-[#ffd54a]"
             placeholder="Full name"
           />
         </label>
 
-        <label className="grid gap-2 text-sm font-semibold text-[#243a34]">
+        <label className="grid gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-white/72">
           Phone number
           <input
             type="tel"
             value={details.phone}
             onChange={(event) => updateField("phone", event.target.value)}
-            className="h-12 rounded-2xl border border-[#d4ddd8] bg-[#fbfaf7] px-4 text-sm text-[#17231e] outline-none transition-colors focus:border-[#163a33]"
+            className="h-14 rounded-[1.2rem] border border-white/10 bg-white/7 px-4 text-sm text-white outline-none transition-colors placeholder:text-white/34 focus:border-[#ffd54a]"
             placeholder="+91 98765 43210"
           />
         </label>
 
-        <label className="grid gap-2 text-sm font-semibold text-[#243a34]">
+        <label className="grid gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-white/72">
           Address
           <textarea
             value={details.address}
             onChange={(event) => updateField("address", event.target.value)}
             rows={4}
-            className="rounded-2xl border border-[#d4ddd8] bg-[#fbfaf7] px-4 py-3 text-sm text-[#17231e] outline-none transition-colors focus:border-[#163a33]"
+            className="rounded-[1.2rem] border border-white/10 bg-white/7 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/34 focus:border-[#ffd54a]"
             placeholder="House number, street, city, state, postal code"
           />
         </label>
 
-        <label className="grid gap-2 text-sm font-semibold text-[#243a34]">
+        <label className="grid gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-white/72">
           Optional note
           <textarea
             value={details.note}
             onChange={(event) => updateField("note", event.target.value)}
             rows={3}
-            className="rounded-2xl border border-[#d4ddd8] bg-[#fbfaf7] px-4 py-3 text-sm text-[#17231e] outline-none transition-colors focus:border-[#163a33]"
+            className="rounded-[1.2rem] border border-white/10 bg-white/7 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/34 focus:border-[#ffd54a]"
             placeholder="Gift wrap, delivery timing, custom text, or anything else"
           />
         </label>
       </div>
 
       {formError ? (
-        <p className="mt-4 rounded-2xl border border-[#f3d2cf] bg-[#fff3f1] px-4 py-3 text-sm text-[#9b3d32]">
+        <p className="mt-4 rounded-[1.2rem] border border-[#7a3328] bg-[#2c1714] px-4 py-3 text-sm text-[#ffb1a7]">
           {formError}
         </p>
       ) : null}
 
-      <p className="mt-4 text-sm leading-7 text-[#5b6762]">
-        Orders open in WhatsApp with the cart summary, pricing, and delivery details
-        already filled in.
+      <p className="mt-4 text-sm leading-7 text-white/62">
+        WhatsApp opens with the cart summary, pricing, and customer details already
+        filled in.
       </p>
 
       <button
         type="submit"
         disabled={cartCount === 0}
-        className="mt-5 inline-flex h-14 w-full items-center justify-center rounded-full bg-[#163a33] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#22483f] disabled:cursor-not-allowed disabled:bg-[#a0b4ad]"
+        className="mt-5 inline-flex h-14 w-full items-center justify-center rounded-full bg-[#ffd54a] px-5 text-sm font-semibold uppercase tracking-[0.18em] text-black transition-colors hover:bg-[#ffdf73] disabled:cursor-not-allowed disabled:bg-[#8d8d8d]"
       >
         Place Order on WhatsApp
       </button>
