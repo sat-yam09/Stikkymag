@@ -25,7 +25,7 @@ const appSections = [
   {
     title: "Pre-designed store",
     description:
-      "Browse ready-made keychains and magnets like a storefront app home tab.",
+      "Browse ready-made keychains like a storefront app home tab.",
     tone: "bg-white/88",
     href: "#predesigned-section",
     cta: "Open presets",
@@ -190,7 +190,7 @@ export default function Home() {
                   Pre-designed drops
                 </p>
                 <p className="mt-3 text-sm leading-7 text-[#6e655a]">
-                  A bold preset grid for quick purchases and repeat bestselling products.
+                  A bold preset grid for your latest ready-made keychain drops.
                 </p>
               </div>
 
@@ -245,7 +245,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Pre-designed section"
               title="Preset drops arranged like a storefront collection."
-              description="This is the quick-shop area of the app: clean presets, bold cards, and instant add-to-cart behavior with combo pricing."
+              description="This is the quick-shop area of the app: your real ready-made keychain photos, bold cards, and instant add-to-cart behavior with combo pricing."
             />
 
             <div className="mt-12 rounded-[2.2rem] border border-[#ece5da] bg-[#f8f3eb] p-6">
@@ -255,12 +255,12 @@ export default function Home() {
                     Keychains
                   </h3>
                   <p className="mt-2 text-sm text-[#5c6763]">
-                    Circle-only ready-made charms for initials, travel themes, and pet
-                    keepsakes.
+                    Circle-only ready-made keychains based on your current featured
+                    drops.
                   </p>
                 </div>
                 <span className="inline-flex rounded-full border border-[#d6dfda] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#537165]">
-                  Circle only
+                  Latest drop
                 </span>
               </div>
 
@@ -271,28 +271,30 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-8 rounded-[2.2rem] border border-[#e4ebe6] bg-[#edf4ef] p-6">
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                  <h3 className="font-display text-4xl tracking-[-0.05em] text-[#18231d]">
-                    Fridge Magnets
-                  </h3>
-                  <p className="mt-2 text-sm text-[#5c6763]">
-                    Mix circle and square formats for desks, refrigerators, shelves, and
-                    gift bundles.
-                  </p>
+            {magnetProducts.length > 0 ? (
+              <div className="mt-8 rounded-[2.2rem] border border-[#e4ebe6] bg-[#edf4ef] p-6">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <h3 className="font-display text-4xl tracking-[-0.05em] text-[#18231d]">
+                      Fridge Magnets
+                    </h3>
+                    <p className="mt-2 text-sm text-[#5c6763]">
+                      Mix circle and square formats for desks, refrigerators, shelves, and
+                      gift bundles.
+                    </p>
+                  </div>
+                  <span className="inline-flex rounded-full border border-[#d6dfda] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#537165]">
+                    Circle + square
+                  </span>
                 </div>
-                <span className="inline-flex rounded-full border border-[#d6dfda] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#537165]">
-                  Circle + square
-                </span>
-              </div>
 
-              <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                {magnetProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
+                <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  {magnetProducts.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : null}
           </div>
         </section>
 
