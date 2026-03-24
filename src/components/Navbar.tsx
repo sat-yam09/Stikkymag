@@ -14,7 +14,7 @@ export function Navbar() {
           </div>
           <div>
             <p className="font-display text-2xl tracking-[-0.06em] text-[#16211d]">
-              Keepsake Atelier
+              Stikkymag
             </p>
             <p className="text-xs uppercase tracking-[0.28em] text-[#61706a]">
               Keychains and magnets

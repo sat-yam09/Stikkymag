@@ -3,13 +3,13 @@ import { CartProvider } from "@/context/CartContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Keepsake Atelier | Custom Keychains & Fridge Magnets",
+  title: "Stikkymag | Custom Keychains & Fridge Magnets",
   description:
     "A premium storefront for pre-designed and custom keychains and fridge magnets with WhatsApp-based checkout.",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
-    title: "Keepsake Atelier",
+    title: "Stikkymag",
     statusBarStyle: "default",
   },
 };

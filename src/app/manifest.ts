@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Keepsake Atelier",
-    short_name: "Keepsake",
+    name: "Stikkymag",
+    short_name: "Stikkymag",
     description:
       "Custom keychains and fridge magnets with live preview and WhatsApp checkout.",
     start_url: "/",
