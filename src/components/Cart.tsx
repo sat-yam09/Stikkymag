@@ -9,7 +9,6 @@ import {
   generateOrderId,
 } from "@/lib/whatsapp";
 import {
-  FREE_DELIVERY_THRESHOLD,
   TWO_ITEM_COMBO_PRICE,
   formatCurrency,
   getKindLabel,
@@ -61,7 +60,6 @@ export function Cart() {
     listSubtotal,
     subtotal,
     comboSavings,
-    deliveryFee,
     total,
     closeCart,
     clearCart,
@@ -271,7 +269,7 @@ export function Cart() {
                   Cart total
                 </h3>
               </div>
-              <span className="rounded-full bg-[#111111] px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#ffd54a]">
+              <span className="rounded-full bg-[#111111] px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white">
                 2 for {formatCurrency(TWO_ITEM_COMBO_PRICE)}
               </span>
             </div>
@@ -297,14 +295,12 @@ export function Cart() {
               </div>
               <div className="flex items-center justify-between">
                 <span>Delivery</span>
-                <span className="font-semibold text-[#111111]">
-                  {deliveryFee === 0 ? "Free" : formatCurrency(deliveryFee)}
-                </span>
+                <span className="font-semibold text-[#111111]">Mentioned after order</span>
               </div>
             </div>
 
             <div className="mt-4 rounded-[1.4rem] bg-[#f7f7f7] px-4 py-3 text-sm text-[#5c5c5c]">
-              Free delivery unlocks at {formatCurrency(FREE_DELIVERY_THRESHOLD)}.
+              Delivery charge will be mentioned after order confirmation.
             </div>
 
             <div className="mt-4 flex items-center justify-between border-t border-[#ececec] pt-4">

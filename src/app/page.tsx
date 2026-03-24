@@ -72,7 +72,7 @@ export default function Home() {
             <p className="mt-4 text-sm leading-7 text-[#555555]">
               {sectionCard.description}
             </p>
-            <span className="mt-6 inline-flex rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#ffd54a]">
+            <span className="mt-6 inline-flex rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
               View page
             </span>
           </Link>
@@ -92,7 +92,7 @@ export default function Home() {
 
           <Link
             href="/shop"
-            className="rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#ffd54a]"
+            className="rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white"
           >
             Go to shop
           </Link>

@@ -44,7 +44,7 @@ export function ProductDetailView({
             <span className="rounded-full border border-white/70 bg-white/88 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#555555]">
               {product.badge}
             </span>
-            <span className="rounded-full bg-[#111111] px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#ffd54a]">
+            <span className="rounded-full bg-[#111111] px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white">
               2 for {formatCurrency(TWO_ITEM_COMBO_PRICE)}
             </span>
           </div>
@@ -101,7 +101,7 @@ export function ProductDetailView({
               <button
                 type="button"
                 onClick={() => addPreDesignedProduct(product)}
-                className="inline-flex h-14 items-center justify-center rounded-full bg-[#111111] px-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#ffd54a] transition-colors hover:bg-[#242424]"
+                className="inline-flex h-14 items-center justify-center rounded-full bg-[#111111] px-6 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#242424]"
               >
                 Add to Cart
               </button>
@@ -156,7 +156,7 @@ export function ProductDetailView({
             </div>
             <Link
               href="/shop"
-              className="rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#ffd54a]"
+              className="rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white"
             >
               View all
             </Link>

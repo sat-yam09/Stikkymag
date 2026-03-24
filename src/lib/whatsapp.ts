@@ -73,7 +73,7 @@ export function buildWhatsappMessage(params: {
     lines.push(`- Combo Savings: -${formatCurrency(comboSavings)}`);
   }
   lines.push(`- Subtotal: ${formatCurrency(subtotal)}`);
-  lines.push(`- Delivery: ${deliveryFee === 0 ? "Free" : formatCurrency(deliveryFee)}`);
+  lines.push("- Delivery Charge: Will be mentioned after order confirmation");
   lines.push(`- Total: ${formatCurrency(grandTotal)}`);
   lines.push("");
   lines.push("Customer Details:");

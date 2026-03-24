@@ -18,7 +18,7 @@ export default function NotFound() {
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
             href="/"
-            className="inline-flex h-14 items-center justify-center rounded-full bg-[#111111] px-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#ffd54a]"
+            className="inline-flex h-14 items-center justify-center rounded-full bg-[#111111] px-6 text-sm font-semibold uppercase tracking-[0.18em] text-white"
           >
             Go home
           </Link>

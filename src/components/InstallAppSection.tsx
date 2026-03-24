@@ -140,7 +140,7 @@ export function InstallAppSection() {
               </div>
 
               <div className="mt-4 grid gap-2">
-                <div className="rounded-[1.2rem] bg-[#111111] px-4 py-3 text-sm font-semibold text-[#ffd54a]">
+                <div className="rounded-[1.2rem] bg-[#111111] px-4 py-3 text-sm font-semibold text-white">
                   Quick shop
                 </div>
                 <div className="rounded-[1.2rem] bg-[#ffd54a] px-4 py-3 text-sm font-semibold text-black">
@@ -186,7 +186,7 @@ export function InstallAppSection() {
               key={step}
               className="flex gap-4 rounded-[1.7rem] border border-[#ececec] bg-[#fafafa] p-4"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[1.2rem] bg-[#111111] font-display text-2xl text-[#ffd54a]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[1.2rem] bg-[#111111] font-display text-2xl text-white">
                 0{index + 1}
               </div>
               <p className="text-sm leading-7 text-[#545454]">{step}</p>

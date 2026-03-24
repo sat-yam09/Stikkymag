@@ -22,8 +22,8 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
-  --font-sans: "Aptos", "Trebuchet MS", "Segoe UI", sans-serif;
-  --font-display: "Arial Narrow", "Franklin Gothic Medium", "Trebuchet MS", sans-serif;
+  --font-sans: "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * {

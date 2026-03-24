@@ -2,8 +2,6 @@ import type { CartItem, ProductKind, ProductShape, ProductType } from "@/lib/typ
 
 export const SINGLE_PRODUCT_PRICE = 100;
 export const TWO_ITEM_COMBO_PRICE = 180;
-export const FREE_DELIVERY_THRESHOLD = 999;
-export const STANDARD_DELIVERY_FEE = 79;
 
 const currencyFormatter = new Intl.NumberFormat("en-IN", {
   style: "currency",
@@ -78,9 +76,6 @@ export function getComboSavings(items: CartItem[]) {
 }
 
 export function getDeliveryFee(discountedSubtotal: number) {
-  if (discountedSubtotal === 0 || discountedSubtotal >= FREE_DELIVERY_THRESHOLD) {
-    return 0;
-  }
-
-  return STANDARD_DELIVERY_FEE;
+  void discountedSubtotal;
+  return 0;
 }

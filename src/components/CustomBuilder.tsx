@@ -379,7 +379,7 @@ export function CustomBuilder() {
               so the custom flow feels as direct as shopping a preset tile.
             </p>
           </div>
-          <span className="inline-flex w-fit rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#ffd54a]">
+          <span className="inline-flex w-fit rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
             {productLabel}
           </span>
         </div>

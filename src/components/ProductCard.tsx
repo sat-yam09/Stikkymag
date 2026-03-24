@@ -30,7 +30,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <span className="inline-flex rounded-full border border-white/70 bg-white/88 px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#505050]">
               {product.badge}
             </span>
-            <span className="inline-flex rounded-full bg-[#111111] px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#ffd54a]">
+            <span className="inline-flex rounded-full bg-[#111111] px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-white">
               2 for {formatCurrency(TWO_ITEM_COMBO_PRICE)}
             </span>
           </div>
@@ -93,7 +93,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <button
             type="button"
             onClick={() => addPreDesignedProduct(product)}
-            className="inline-flex h-12 items-center justify-center rounded-full bg-[#111111] px-4 text-sm font-semibold text-[#ffd54a] transition-colors hover:bg-[#242424]"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-[#111111] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#242424]"
           >
             Add to Cart
           </button>
