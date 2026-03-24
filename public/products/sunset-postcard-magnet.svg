@@ -1,0 +1,18 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="160" fill="#FFF2E3"/>
+  <ellipse cx="400" cy="672" rx="172" ry="34" fill="#000000" fill-opacity="0.08"/>
+  <rect x="172" y="170" width="456" height="456" rx="118" fill="url(#paint0_linear_31_7)"/>
+  <rect x="178" y="176" width="444" height="444" rx="112" stroke="white" stroke-opacity="0.78" stroke-width="10"/>
+  <rect x="240" y="240" width="320" height="320" rx="74" fill="#FFF8F1"/>
+  <circle cx="431" cy="338" r="68" fill="#FFC978"/>
+  <path d="M238 454C286 402 329 376 396 376C463 376 507 402 562 454V560H238V454Z" fill="#F2A57D"/>
+  <path d="M240 518C296 468 332 446 392 446C452 446 497 473 560 536" stroke="#6D5960" stroke-width="8" stroke-linecap="round"/>
+  <path d="M273 421L355 343L420 405L485 321L560 401" stroke="#6D5960" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="597" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" letter-spacing="8" fill="#7B5545">WEEKEND</text>
+  <defs>
+    <linearGradient id="paint0_linear_31_7" x1="190" y1="184" x2="616" y2="612" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF9"/>
+      <stop offset="1" stop-color="#F5D8BB"/>
+    </linearGradient>
+  </defs>
+</svg>

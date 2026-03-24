@@ -1,0 +1,25 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="160" fill="#EFF3F8"/>
+  <ellipse cx="400" cy="664" rx="158" ry="36" fill="#000000" fill-opacity="0.08"/>
+  <circle cx="400" cy="126" r="42" stroke="#C7CED2" stroke-width="18"/>
+  <rect x="375" y="156" width="50" height="54" rx="20" fill="#E7ECEF"/>
+  <circle cx="400" cy="410" r="220" fill="url(#paint0_linear_31_4)"/>
+  <circle cx="400" cy="410" r="214" stroke="white" stroke-opacity="0.7" stroke-width="10"/>
+  <circle cx="400" cy="410" r="164" fill="#F9FBFF"/>
+  <circle cx="338" cy="338" r="54" fill="#D3E2F7"/>
+  <circle cx="470" cy="313" r="40" fill="#F7D8AA"/>
+  <path d="M265 474H545" stroke="#5E7087" stroke-width="8" stroke-linecap="round"/>
+  <path d="M292 474V423H327V474" stroke="#5E7087" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M336 474V382H378V474" stroke="#5E7087" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M387 474V337H425V474" stroke="#5E7087" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M436 474V402H472V474" stroke="#5E7087" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M482 474V360H518V474" stroke="#5E7087" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M294 553C334 522 370 507 418 507C465 507 505 522 543 553" stroke="#7E91A8" stroke-width="8" stroke-linecap="round"/>
+  <text x="401" y="586" text-anchor="middle" font-size="42" font-family="Arial, sans-serif" letter-spacing="10" fill="#425368">CITY</text>
+  <defs>
+    <linearGradient id="paint0_linear_31_4" x1="220" y1="226" x2="586" y2="602" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDE7F4"/>
+    </linearGradient>
+  </defs>
+</svg>

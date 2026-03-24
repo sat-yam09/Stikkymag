@@ -1,0 +1,25 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="160" fill="#F8EEE4"/>
+  <ellipse cx="400" cy="672" rx="172" ry="34" fill="#000000" fill-opacity="0.08"/>
+  <rect x="172" y="170" width="456" height="456" rx="118" fill="url(#paint0_linear_31_8)"/>
+  <rect x="178" y="176" width="444" height="444" rx="112" stroke="white" stroke-opacity="0.78" stroke-width="10"/>
+  <rect x="236" y="236" width="328" height="328" rx="74" fill="#FDF8F1"/>
+  <rect x="236" y="236" width="82" height="82" fill="#E9D5C0"/>
+  <rect x="400" y="236" width="82" height="82" fill="#E9D5C0"/>
+  <rect x="318" y="318" width="82" height="82" fill="#E9D5C0"/>
+  <rect x="482" y="318" width="82" height="82" fill="#E9D5C0"/>
+  <rect x="236" y="400" width="82" height="82" fill="#E9D5C0"/>
+  <rect x="400" y="400" width="82" height="82" fill="#E9D5C0"/>
+  <rect x="318" y="482" width="82" height="82" fill="#E9D5C0"/>
+  <rect x="482" y="482" width="82" height="82" fill="#E9D5C0"/>
+  <path d="M324 380H472V478C472 513.346 443.346 542 408 542H388C352.654 542 324 513.346 324 478V380Z" fill="#F7F0E8" stroke="#6A5648" stroke-width="10"/>
+  <path d="M472 400H503C521.778 400 537 415.222 537 434V446C537 464.778 521.778 480 503 480H472" stroke="#6A5648" stroke-width="10"/>
+  <path d="M351 355C360 330 382 317 406 317C430 317 453 330 462 355" stroke="#B37B54" stroke-width="10" stroke-linecap="round"/>
+  <text x="400" y="598" text-anchor="middle" font-size="32" font-family="Arial, sans-serif" letter-spacing="8" fill="#6E5648">CAFE</text>
+  <defs>
+    <linearGradient id="paint0_linear_31_8" x1="190" y1="184" x2="617" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#EEDBC7"/>
+    </linearGradient>
+  </defs>
+</svg>

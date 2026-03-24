@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f2eee6;
+  --foreground: #16211d;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: #fffdf8;
+  --muted: #596560;
+  --border: rgba(18, 33, 29, 0.1);
+  --accent: #163a33;
+  --accent-soft: #e3efe9;
+  --sand: #f8f2e8;
+  --shadow-soft: 0 24px 80px rgba(15, 23, 42, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: "Aptos", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(227, 239, 233, 0.8), transparent 28%),
+    radial-gradient(circle at 84% 12%, rgba(255, 228, 199, 0.7), transparent 24%),
+    linear-gradient(180deg, #fbf8f2 0%, #f2eee6 36%, #f6f2ea 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #cfe7db;
+  color: #102824;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 10s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease both;
+}

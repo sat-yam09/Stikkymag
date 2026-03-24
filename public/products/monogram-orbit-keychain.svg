@@ -1,0 +1,20 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="160" fill="#F6F1E8"/>
+  <ellipse cx="400" cy="665" rx="160" ry="36" fill="#000000" fill-opacity="0.08"/>
+  <circle cx="400" cy="126" r="42" stroke="#C7CED2" stroke-width="18"/>
+  <rect x="375" y="156" width="50" height="54" rx="20" fill="#E7ECEF"/>
+  <circle cx="400" cy="410" r="220" fill="url(#paint0_linear_31_3)"/>
+  <circle cx="400" cy="410" r="214" stroke="white" stroke-opacity="0.7" stroke-width="10"/>
+  <circle cx="400" cy="410" r="162" fill="#FBF8F1"/>
+  <path d="M286 410C318 334 366 296 438 296C486 296 522 314 549 350" stroke="#D8C5AD" stroke-width="6" stroke-linecap="round"/>
+  <path d="M269 452C306 523 358 560 439 560C489 560 530 541 559 507" stroke="#D8C5AD" stroke-width="6" stroke-linecap="round"/>
+  <text x="400" y="470" text-anchor="middle" font-size="182" font-family="Georgia, serif" fill="#2D241B">K</text>
+  <circle cx="286" cy="347" r="12" fill="#E4D4C0"/>
+  <circle cx="555" cy="474" r="10" fill="#E4D4C0"/>
+  <defs>
+    <linearGradient id="paint0_linear_31_3" x1="220" y1="226" x2="585" y2="603" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#E9DFCF"/>
+    </linearGradient>
+  </defs>
+</svg>
